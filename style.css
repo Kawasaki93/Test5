@@ -9,8 +9,8 @@
   width: 80%;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 100px 100px 130px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 450px 130px 130px 130px 130px 130px 130px 130px 130px;
+  grid-template-columns:100px 100px 100px 100px 130px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px 450px 130px 130px 130px 130px 130px 130px 130px;
   gap: 0px 0px;
   float: right;
 }
@@ -131,7 +131,7 @@ body {
   font-size: 80px;
 }
 
-/* line 122, ../scss/sunapp.scss */
+/*GRUPOS DE HAMACAS------------- */
 .especiales {
   background: orange;
 }
@@ -141,7 +141,7 @@ body {
   
   
 }
-/* line 126, ../scss/sunapp.scss */
+/*GRUPOS DE HAMACAS------------- */
 .desconectadosgeneral {
   visibility: hidden;
 }
@@ -242,17 +242,9 @@ input, textarea {
   transform: translateY(4px);
 }
 
-/* line 211, ../scss/sunapp.scss */
-.sunbed:nth-of-type(1):before {
-  content: '8';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-  margin-bottom: 30px;
-}
-.sunbed:nth-of-type(7):before {
-  content: 'Oficina.......8 ';
+
+.sunbed:nth-of-type(8):before {
+  content: 'Oficina......8 ';
   position: absolute;
   right: 130%;
   font-size: 45px;
@@ -262,130 +254,87 @@ input, textarea {
   
 }
 /* line 219, ../scss/sunapp.scss */
-.sunbed:nth-of-type(13):before,
-.sunbed:nth-of-type(25):before,
-.sunbed:nth-of-type(37):before {
-  content: '5';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-}
-
-/* line 230, ../scss/sunapp.scss */
-.sunbed:nth-of-type(13):before {
-  content: '7';
-}
-
-/* line 234, ../scss/sunapp.scss */
-.sunbed:nth-of-type(25):before {
-  content: "6";
-}
-
-/* line 238, ../scss/sunapp.scss */
-.sunbed:nth-of-type(49):before {
-  content: '4';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-}
-
-/* line 245, ../scss/sunapp.scss */
-.sunbed:nth-of-type(61):before {
-  content: '3';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-}
-
-/* line 252, ../scss/sunapp.scss */
-.sunbed:nth-of-type(73):before {
-  content: '2';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-}
-
-/* line 260, ../scss/sunapp.scss */
-.sunbed:nth-of-type(85):before {
-  content: '1';
-  position: absolute;
-  right: 130%;
-  font-size: 50px;
-  color: red;
-}
-
-/* line 268, ../scss/sunapp.scss */
-.sunbed:nth-of-type(97):before {
-  content: '8';
-  position: absolute;
-  right: 130%;
-  font-size: 30px;
-  color: red;
-}
-
-/* line 282, ../scss/sunapp.scss */
-.sunbed:nth-of-type(109):before {
+.sunbed:nth-of-type(17):before {
   content: '7';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 20px;
+  
+  
 }
-
-/* line 290, ../scss/sunapp.scss */
-.sunbed:nth-of-type(121):before {
+.sunbed:nth-of-type(31):before {
   content: '6';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 200px;
+  
+  
 }
 
-/* line 298, ../scss/sunapp.scss */
-.sunbed:nth-of-type(133):before {
+.sunbed:nth-of-type(45):before {
   content: '5';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 200px;
+  
+  
 }
-
-/* line 306, ../scss/sunapp.scss */
-.sunbed:nth-of-type(145):before {
+.sunbed:nth-of-type(59):before {
   content: '4';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 200px;
+  
+  
 }
-
-/* line 314, ../scss/sunapp.scss */
-.sunbed:nth-of-type(157):before {
+.sunbed:nth-of-type(73):before {
   content: '3';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 200px;
+  
+  
 }
-
-/* line 322, ../scss/sunapp.scss */
-.sunbed:nth-of-type(169):before {
+.sunbed:nth-of-type(87):before {
   content: '2';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
-}
+  margin-right: 200px;
+  
 
-/* line 330, ../scss/sunapp.scss */
-.sunbed:nth-of-type(181):before {
+}
+.sunbed:nth-of-type(101):before {
   content: '1';
   position: absolute;
   right: 130%;
-  font-size: 30px;
+  font-size: 45px;
   color: red;
+  margin-right: 200px;
+  
+  
 }
+.sunbed:nth-of-type(115):before {
+  content: '0';
+  position: absolute;
+  right: 130%;
+  font-size: 45px;
+  color: red;
+  margin-right: 200px;
+  
+  
+}
+
+
+
