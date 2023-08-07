@@ -294,41 +294,29 @@ function clearClick(number) {
     window.location.reload();
 }
 //BOTONES PARA OCULTAR FILAS----------
-function toggleDesconectadosFila8() { 
-     var $desconectadosFila8 = $(".desconectadosfila8"); 
-     if ($desconectadosFila8.css("visibility") === "hidden") { 
-         $desconectadosFila8.css("visibility", "visible"); 
-     } else { 
-         $desconectadosFila8.css("visibility", "hidden"); 
-     } 
- } 
-  
- function toggledesconectadosFila1() { 
-     var $desconectadosFila1 = $(".desconectadosFila1"); 
-     if ($desconectadosFila1.css("visibility") === "hidden") { 
-         $desconectadosFila1.css("visibility", "visible"); 
-     } else { 
-         $desconectadosFila1.css("visibility", "hidden"); 
-     } 
- } 
-  
- function toggleDesconectadosFila0() { 
-     var $desconectadosFila0 = $(".desconectadosFila0"); 
-     if ($desconectadosFila0.css("visibility") === "hidden") { 
-         $desconectadosFila0.css("visibility", "visible"); 
-     } else { 
-         $desconectadosFila0.css("visibility", "hidden"); 
-     } 
- } 
-  
- function toggleZonalibre() { 
-     var $Zonalibre = $(".Zonalibre"); 
-     if ($Zonalibre.css("visibility") === "hidden") { 
-         $Zonalibre.css("visibility", "visible"); 
-     } else { 
-         $Zonalibre.css("visibility", "hidden"); 
-     } 
- }
+function toggleDesconectadosFila8() {
+    var $desconectadosFila8 = $(".desconectadosfila8");
+    var currentVisibility = $desconectadosFila8.css("visibility");
+
+    if (currentVisibility === "hidden") {
+        $desconectadosFila8.css("visibility", "visible");
+        localStorage.setItem("desconectadosFila8Visibility", "visible");
+    } else {
+        $desconectadosFila8.css("visibility", "hidden");
+        localStorage.setItem("desconectadosFila8Visibility", "hidden");
+    }
+}
+
+// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
+$(document).ready(function() {
+    var storedVisibility = localStorage.getItem("desconectadosFila8Visibility");
+    if (storedVisibility === "visible") {
+        $(".desconectadosfila8").css("visibility", "visible");
+    } else if (storedVisibility === "hidden") {
+        $(".desconectadosfila8").css("visibility", "hidden");
+    }
+});
+
 
 
 var SunbedController = function() {
