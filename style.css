@@ -335,7 +335,16 @@ input, textarea {
   
   
 }
-
+.sunbed:nth-of-type(26):after {
+  content: '7';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+  
+}
 
 .sunbed:nth-of-type(40):after {
   content: '6';
