@@ -243,7 +243,7 @@ input, textarea {
 }
 
 
-.sunbed:nth-of-type(8):before {
+.sunbed:nth-of-type(10):before {
   content: 'Oficina......8 ';
   position: absolute;
   right: 130%;
