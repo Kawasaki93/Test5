@@ -6,7 +6,7 @@
 
 /* line 6, ../scss/sunapp.scss */
 .beach_wrapper {
-  width: 80%;
+  width: 88%;
   max-width: 100%;
   display: grid;
   grid-template-columns:100px 100px 100px 100px 130px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
@@ -37,7 +37,7 @@ body {
 
 /* line 34, ../scss/sunapp.scss */
 .left_panel {
-  width: 20%;
+  width: 5%;
   float: left;
 }
 
