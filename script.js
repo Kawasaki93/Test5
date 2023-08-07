@@ -294,51 +294,41 @@ function clearClick(number) {
     window.location.reload();
 }
 //BOTONES PARA OCULTAR FILAS----------
-function toggleVisibility($element, localStorageKey) {
-    var currentVisibility = $element.css("visibility");
-
-    if (currentVisibility === "hidden") {
-        $element.css("visibility", "visible");
-        localStorage.setItem(localStorageKey, "visible");
-    } else {
-        $element.css("visibility", "hidden");
-        localStorage.setItem(localStorageKey, "hidden");
-    }
-}
-
-$(document).ready(function() {
-    function restoreVisibility($element, localStorageKey) {
-        var storedVisibility = localStorage.getItem(localStorageKey);
-        if (storedVisibility === "visible") {
-            $element.css("visibility", "visible");
-        } else if (storedVisibility === "hidden") {
-            $element.css("visibility", "hidden");
-        }
-    }
-
-    // Restaurar visibilidad para todos los elementos al cargar la página
-    restoreVisibility($(".desconectadosfila8"), "desconectadosFila8Visibility");
-    restoreVisibility($(".desconectadosFila1"), "desconectadosFila1Visibility");
-    restoreVisibility($(".desconectadosFila0"), "desconectadosFila0Visibility");
-    restoreVisibility($(".Zonalibre"), "ZonalibreVisibility");
-
-    // Agregar eventos de clic para cambiar la visibilidad y guardar en el localStorage
-    $(".desconectadosfila8").click(function() {
-        toggleVisibility($(this), "desconectadosFila8Visibility");
-    });
-
-    $(".desconectadosFila1").click(function() {
-        toggleVisibility($(this), "desconectadosFila1Visibility");
-    });
-
-    $(".desconectadosFila0").click(function() {
-        toggleVisibility($(this), "desconectadosFila0Visibility");
-    });
-
-    $(".Zonalibre").click(function() {
-        toggleVisibility($(this), "ZonalibreVisibility");
-    });
-});
+function toggleDesconectadosFila8() { 
+     var $desconectadosFila8 = $(".desconectadosfila8"); 
+     if ($desconectadosFila8.css("visibility") === "hidden") { 
+         $desconectadosFila8.css("visibility", "visible"); 
+     } else { 
+         $desconectadosFila8.css("visibility", "hidden"); 
+     } 
+ } 
+  
+ function toggledesconectadosFila1() { 
+     var $desconectadosFila1 = $(".desconectadosFila1"); 
+     if ($desconectadosFila1.css("visibility") === "hidden") { 
+         $desconectadosFila1.css("visibility", "visible"); 
+     } else { 
+         $desconectadosFila1.css("visibility", "hidden"); 
+     } 
+ } 
+  
+ function toggleDesconectadosFila0() { 
+     var $desconectadosFila0 = $(".desconectadosFila0"); 
+     if ($desconectadosFila0.css("visibility") === "hidden") { 
+         $desconectadosFila0.css("visibility", "visible"); 
+     } else { 
+         $desconectadosFila0.css("visibility", "hidden"); 
+     } 
+ } 
+  
+ function toggleZonalibre() { 
+     var $Zonalibre = $(".Zonalibre"); 
+     if ($Zonalibre.css("visibility") === "hidden") { 
+         $Zonalibre.css("visibility", "visible"); 
+     } else { 
+         $Zonalibre.css("visibility", "hidden"); 
+     } 
+ }
 
 
 var SunbedController = function() {
