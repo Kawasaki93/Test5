@@ -296,12 +296,27 @@ function clearClick(number) {
 //BOTONES PARA OCULTAR FILAS----------
 function toggleDesconectadosFila8() {
     var $desconectadosFila8 = $(".desconectadosfila8");
-    if ($desconectadosFila8.css("visibility") === "hidden") {
+    var currentVisibility = $desconectadosFila8.css("visibility");
+
+    if (currentVisibility === "hidden") {
         $desconectadosFila8.css("visibility", "visible");
+        localStorage.setItem("desconectadosFila8Visibility", "visible");
     } else {
         $desconectadosFila8.css("visibility", "hidden");
+        localStorage.setItem("desconectadosFila8Visibility", "hidden");
     }
 }
+
+// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
+$(document).ready(function() {
+    var storedVisibility = localStorage.getItem("desconectadosFila8Visibility");
+    if (storedVisibility === "visible") {
+        $(".desconectadosfila8").css("visibility", "visible");
+    } else if (storedVisibility === "hidden") {
+        $(".desconectadosfila8").css("visibility", "hidden");
+    }
+});
+
 
 function toggledesconectadosFila1() {
     var $desconectadosFila1 = $(".desconectadosFila1");
