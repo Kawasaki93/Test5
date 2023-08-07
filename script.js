@@ -233,11 +233,11 @@ for (var x = 1; x < 238; x++) {
 $("#clon_126,#clon_127,#clon_128,#clon_129,#clon_130,#clon_131,#clon_132,#clon_133,#clon_134,#clon_135,#clon_136,#clon_137,#clon_138,#clon_139,#clon_140,#clon_141,#clon_142,#clon_143,#clon_144,#clon_145,#clon_146,#clon_147,#clon_148,#clon_149,#clon_150,#clon_151,#clon_152,#clon_153,#clon_154,#clon_155,#clon_156,#clon_157,#clon_158,#clon_159,#clon_160,#clon_161,#clon_162,#clon_163,#clon_164,#clon_165,#clon_166,#clon_167,#clon_168,#clon_169,#clon_170,#clon_171,#clon_172,#clon_173,#clon_174,#clon_175,#clon_176,#clon_177,#clon_178,#clon_179,#clon_180,#clon_181,#clon_182,#clon_183,#clon_184,#clon_185,#clon_186,#clon_187,#clon_188,#clon_189,#clon_190,#clon_191,#clon_199").addClass('especiales');
 //CLONES DESCONECTADOS GENERALES
 $("#clon_1,#clon_2,#clon_3,#clon_4,#clon_5,#clon_6,#clon_7,#clon_8,#clon_11,#clon_13,#clon_14,#clon_15,#clon_27,#clon_41,#clon_55,#clon_69,#clon_83,#clon_97,#clon_111").addClass('desconectadosgeneral');
-//CLONES DESCONECTADOS PRIMERA FILA(REVELAR AÑADIENDO UN 1)
-$("#clon_84,#clon_85,#clon_86,#clon_87,#clon_88,#clon_89,#clon_90,#clon_91,#clon_92,#clon_93,#clon_94,#clon_95").addClass("desconectadosfila11");
-//CLONES DESCONECTADOS SEGUNDA FILA(REVELAR AÑADIENDO UN 2)
+//CLONES DESCONECTADOS PRIMERA FILA
+$("#clon_98,#clon_99,#clon_100,#clon_101,#clon_102,#clon_103,#clon_104,#clon_105,#clon_106,#clon_106,#clon_107,#clon_108,#clon_109,#clon_110").addClass("desconectadosFila1");
+//CLONES DESCONECTADOS SEGUNDA FILA
 $("#clon_72,#clon_73,#clon_74,#clon_75,#clon_76,#clon_77,#clon_78,#clon_79,#clon_80,#clon_81,#clon_82,#clon_83,#clon_84").addClass("desconectadosfila22");
-//CLONES OCTAVA FILA(REVELAR AÑADIENDO UN 8)
+//CLONES OCTAVA FILA
 $("#clon_9,#clon_10,#clon_11,#clon_12").addClass("desconectadosfila8");
 //CLONES DE FILA 0
 $("#clon_112,#clon_113,#clon_114,#clon_115,#clon_116,#clon_117,#clon_118,#clon_119,#clon_120,#clon_121,#clon_122,#clon_123,#clon_124,#clon_125").addClass("desconectadosFila0")
@@ -300,6 +300,15 @@ function toggleDesconectadosFila8() {
         $desconectadosFila8.css("visibility", "visible");
     } else {
         $desconectadosFila8.css("visibility", "hidden");
+    }
+}
+
+function toggledesconectadosFila1() {
+    var $desconectadosFila1 = $(".desconectadosFila1");
+    if ($desconectadosFila1.css("visibility") === "hidden") {
+        $desconectadosFila1.css("visibility", "visible");
+    } else {
+        $desconectadosFila1.css("visibility", "hidden");
     }
 }
 
