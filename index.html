@@ -45,13 +45,26 @@
     <button class="button" onclick="$.fancybox.open($('#comments'))">Abrir comenta</button>
     <textarea name="" id="comments" cols="30" rows="10" style="display: none"></textarea>
     <br><br>
-    <button class="button" onclick="handle_shopping_cart_amount(-7)">Restar -7€</button>
+    <button class="button" onclick="handle_shopping_cart_amount(-7)">-7€</button>
     <br>
-    <button class="button" onclick="handle_shopping_cart_amount(-1)">Restar -1€</button>
+    <button class="button" onclick="handle_shopping_cart_amount(-1)">-1€</button>
     <p></p>
-    <button class="button" onclick="clearClick(1)">Reset Local storage</button>
+    
     <button class="button" onclick="SunbedController.reset_local_storage_except_customers(),SunbedController.restore_total_sold()">Reset Colors</button>
-</div>
+<br><br><br>
+   <button class="button" onclick=toggleDesconectadosFila0(1)>Fila0</button>
+   <br>
+   <button class="button" onclick="clearClick(1)">Fila1</button>
+   <br>
+   <button class="button" onclick="toggleDesconectadosFila2(1)">Fila2</button>
+   <br>
+   <button class="button" onclick="toggleDesconectadosFila3(1)">Fila3</button>
+   <br>
+   <button class="button" onclick="toggleZonalibre(1)">ZonaLibre</button>
+   <br>
+     <button class="button" onclick="toggleDesconectadosFila8(1)">fila8</button>
+<button class="button" onclick="clearClick(1)">Reset Local storage</button>
+  </div>
 
 <div class="beach_wrapper">
     <div class="sunbed toggle">
