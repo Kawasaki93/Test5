@@ -294,56 +294,52 @@ function clearClick(number) {
     window.location.reload();
 }
 //BOTONES PARA OCULTAR FILAS----------
-function toggleDesconectadosFila8() {
-    var $desconectadosFila8 = $(".desconectadosfila8");
-    var currentVisibility = $desconectadosFila8.css("visibility");
+function toggleVisibility($element, localStorageKey) {
+    var currentVisibility = $element.css("visibility");
 
     if (currentVisibility === "hidden") {
-        $desconectadosFila8.css("visibility", "visible");
-        localStorage.setItem("desconectadosFila8Visibility", "visible");
+        $element.css("visibility", "visible");
+        localStorage.setItem(localStorageKey, "visible");
     } else {
-        $desconectadosFila8.css("visibility", "hidden");
-        localStorage.setItem("desconectadosFila8Visibility", "hidden");
+        $element.css("visibility", "hidden");
+        localStorage.setItem(localStorageKey, "hidden");
     }
 }
 
-// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
 $(document).ready(function() {
-    var storedVisibility = localStorage.getItem("desconectadosFila8Visibility");
-    if (storedVisibility === "visible") {
-        $(".desconectadosfila8").css("visibility", "visible");
-    } else if (storedVisibility === "hidden") {
-        $(".desconectadosfila8").css("visibility", "hidden");
+    function restoreVisibility($element, localStorageKey) {
+        var storedVisibility = localStorage.getItem(localStorageKey);
+        if (storedVisibility === "visible") {
+            $element.css("visibility", "visible");
+        } else if (storedVisibility === "hidden") {
+            $element.css("visibility", "hidden");
+        }
     }
+
+    // Restaurar visibilidad para todos los elementos al cargar la página
+    restoreVisibility($(".desconectadosfila8"), "desconectadosFila8Visibility");
+    restoreVisibility($(".desconectadosFila1"), "desconectadosFila1Visibility");
+    restoreVisibility($(".desconectadosFila0"), "desconectadosFila0Visibility");
+    restoreVisibility($(".Zonalibre"), "ZonalibreVisibility");
+
+    // Agregar eventos de clic para cambiar la visibilidad y guardar en el localStorage
+    $(".desconectadosfila8").click(function() {
+        toggleVisibility($(this), "desconectadosFila8Visibility");
+    });
+
+    $(".desconectadosFila1").click(function() {
+        toggleVisibility($(this), "desconectadosFila1Visibility");
+    });
+
+    $(".desconectadosFila0").click(function() {
+        toggleVisibility($(this), "desconectadosFila0Visibility");
+    });
+
+    $(".Zonalibre").click(function() {
+        toggleVisibility($(this), "ZonalibreVisibility");
+    });
 });
 
-
-function toggledesconectadosFila1() {
-    var $desconectadosFila1 = $(".desconectadosFila1");
-    if ($desconectadosFila1.css("visibility") === "hidden") {
-        $desconectadosFila1.css("visibility", "visible");
-    } else {
-        $desconectadosFila1.css("visibility", "hidden");
-    }
-}
-
-function toggleDesconectadosFila0() {
-    var $desconectadosFila0 = $(".desconectadosFila0");
-    if ($desconectadosFila0.css("visibility") === "hidden") {
-        $desconectadosFila0.css("visibility", "visible");
-    } else {
-        $desconectadosFila0.css("visibility", "hidden");
-    }
-}
-
-function toggleZonalibre() {
-    var $Zonalibre = $(".Zonalibre");
-    if ($Zonalibre.css("visibility") === "hidden") {
-        $Zonalibre.css("visibility", "visible");
-    } else {
-        $Zonalibre.css("visibility", "hidden");
-    }
-}
 
 var SunbedController = function() {
     return {
