@@ -337,4 +337,83 @@ input, textarea {
 }
 
 
+.sunbed:nth-of-type(40):after {
+  content: '6';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+  
+  
+  
+}
 
+.sunbed:nth-of-type(54):after {
+  content: '5';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+  
+  
+  
+}
+
+.sunbed:nth-of-type(68):after {
+  content: '4';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+  
+}
+.sunbed:nth-of-type(82):after {
+  content: '3';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+}
+.sunbed:nth-of-type(96):after {
+  content: '2';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+}
+.sunbed:nth-of-type(110):after {
+  content: '1';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+}
+
+.sunbed:nth-of-type(125):after {
+  content: '0';
+  position:absolute;
+  top: -05px;
+  left:260%;
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+   
+}
