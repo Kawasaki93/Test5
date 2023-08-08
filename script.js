@@ -191,7 +191,10 @@ for (var x = 1; x < 238; x++) {
     cloned_element.find(".sunbed_name").html(11);
 } else if (x === 110) {
     cloned_element.find(".sunbed_name").html(10);
-} else if (x === 112) {
+} else if (x === 111) {
+    cloned_element.find(".sunbed_name").html("10A");
+}    
+  else if (x === 112) {
     cloned_element.find(".sunbed_name").html("9D");
 } else if (x === 113) {
     cloned_element.find(".sunbed_name").html("9C");
@@ -293,7 +296,7 @@ function clearClick(number) {
     localStorage.clear();
     window.location.reload();
 }
-//BOTONES PARA OCULTAR FILAS----------
+//BOTONES PARA OCULTAR FILAS-----------------------------------------------
 function toggleDesconectadosFila8() {
     var $desconectadosFila8 = $(".desconectadosfila8");
     var currentVisibility = $desconectadosFila8.css("visibility");
@@ -317,33 +320,76 @@ $(document).ready(function() {
     }
 });
 
-function toggledesconectadosFila1() { 
-     var $desconectadosFila1 = $(".desconectadosFila1"); 
-     if ($desconectadosFila1.css("visibility") === "hidden") { 
-         $desconectadosFila1.css("visibility", "visible"); 
-     } else { 
-         $desconectadosFila1.css("visibility", "hidden"); 
-     } 
- } 
-  
- function toggleDesconectadosFila0() { 
-     var $desconectadosFila0 = $(".desconectadosFila0"); 
-     if ($desconectadosFila0.css("visibility") === "hidden") { 
-         $desconectadosFila0.css("visibility", "visible"); 
-     } else { 
-         $desconectadosFila0.css("visibility", "hidden"); 
-     } 
- } 
-  
- function toggleZonalibre() { 
-     var $Zonalibre = $(".Zonalibre"); 
-     if ($Zonalibre.css("visibility") === "hidden") { 
-         $Zonalibre.css("visibility", "visible"); 
-     } else { 
-         $Zonalibre.css("visibility", "hidden"); 
-     } 
- }
+function toggledesconectadosFila1() {
+    var $desconectadosFila1 = $(".desconectadosFila1");
+    var currentVisibility = $desconectadosFila1.css("visibility");
 
+    if (currentVisibility === "hidden") {
+        $desconectadosFila1.css("visibility", "visible");
+        localStorage.setItem("desconectadosFila1Visibility", "visible");
+    } else {
+        $desconectadosFila1.css("visibility", "hidden");
+        localStorage.setItem("desconectadosFila1Visibility", "hidden");
+    }
+}
+
+// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
+$(document).ready(function() {
+    var storedVisibility = localStorage.getItem("desconectadosFila1Visibility");
+    if (storedVisibility === "visible") {
+        $(".desconectadosFila1").css("visibility", "visible");
+    } else if (storedVisibility === "hidden") {
+        $(".desconectadosFila1").css("visibility", "hidden");
+    }
+});
+
+  
+function toggleDesconectadosFila0() {
+    var $desconectadosFila0 = $(".desconectadosFila0");
+    var currentVisibility = $desconectadosFila0.css("visibility");
+
+    if (currentVisibility === "hidden") {
+        $desconectadosFila0.css("visibility", "visible");
+        localStorage.setItem("desconectadosFila0Visibility", "visible");
+    } else {
+        $desconectadosFila0.css("visibility", "hidden");
+        localStorage.setItem("desconectadosFila0Visibility", "hidden");
+    }
+}
+
+// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
+$(document).ready(function() {
+    var storedVisibility = localStorage.getItem("desconectadosFila0Visibility");
+    if (storedVisibility === "visible") {
+        $(".desconectadosFila0").css("visibility", "visible");
+    } else if (storedVisibility === "hidden") {
+        $(".desconectadosFila0").css("visibility", "hidden");
+    }
+});
+  
+function toggleZonalibre() {
+    var $Zonalibre = $(".Zonalibre");
+    var currentVisibility = $Zonalibre.css("visibility");
+
+    if (currentVisibility === "hidden") {
+        $Zonalibre.css("visibility", "visible");
+        localStorage.setItem("ZonalibreVisibility", "visible");
+    } else {
+        $Zonalibre.css("visibility", "hidden");
+        localStorage.setItem("ZonalibreVisibility", "hidden");
+    }
+}
+
+// Al cargar la página, restaurar el estado de visibilidad desde el localStorage si está disponible
+$(document).ready(function() {
+    var storedVisibility = localStorage.getItem("ZonalibreVisibility");
+    if (storedVisibility === "visible") {
+        $(".Zonalibre").css("visibility", "visible");
+    } else if (storedVisibility === "hidden") {
+        $(".Zonalibre").css("visibility", "hidden");
+    }
+});
+  
 var SunbedController = function() {
     return {
         init: function() {
