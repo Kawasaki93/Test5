@@ -317,7 +317,32 @@ $(document).ready(function() {
     }
 });
 
-
+function toggledesconectadosFila1() { 
+     var $desconectadosFila1 = $(".desconectadosFila1"); 
+     if ($desconectadosFila1.css("visibility") === "hidden") { 
+         $desconectadosFila1.css("visibility", "visible"); 
+     } else { 
+         $desconectadosFila1.css("visibility", "hidden"); 
+     } 
+ } 
+  
+ function toggleDesconectadosFila0() { 
+     var $desconectadosFila0 = $(".desconectadosFila0"); 
+     if ($desconectadosFila0.css("visibility") === "hidden") { 
+         $desconectadosFila0.css("visibility", "visible"); 
+     } else { 
+         $desconectadosFila0.css("visibility", "hidden"); 
+     } 
+ } 
+  
+ function toggleZonalibre() { 
+     var $Zonalibre = $(".Zonalibre"); 
+     if ($Zonalibre.css("visibility") === "hidden") { 
+         $Zonalibre.css("visibility", "visible"); 
+     } else { 
+         $Zonalibre.css("visibility", "hidden"); 
+     } 
+ }
 
 var SunbedController = function() {
     return {
